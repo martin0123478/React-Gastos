@@ -13,7 +13,9 @@ const Header = ({
 
 
         {isValidPrespuesto ? (
-            <ControlPresupuesto/>
+            <ControlPresupuesto
+            presupuesto = {presupuesto}
+            />
         ) : (
             <NuevoPresupuesto
         presupuesto = {presupuesto}
