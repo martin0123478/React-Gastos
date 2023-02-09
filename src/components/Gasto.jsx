@@ -1,7 +1,8 @@
 import React from 'react'
+import {formatearFecha} from '../helpers/index'
 
 const Gasto = ({gasto}) => {
-    const {categoria,nombre,cantidad,id} = gasto
+    const {categoria,nombre,cantidad,id,fecha} = gasto
   return (
     <div className='gasto sombra'>
      <div className='contenido-gasto'>
@@ -10,8 +11,14 @@ const Gasto = ({gasto}) => {
                 {categoria}
             </p>
             <p className='gasto'>{nombre}</p>
+            <p className='fecha-gasto'>
+              Agregado el: {''}
+              <span>{formatearFecha(fecha)}</span>
+            </p>
         </div>
+        
      </div>
+     <p className='cantidad-gasto'>${cantidad}</p>
     </div>
   )
 }
