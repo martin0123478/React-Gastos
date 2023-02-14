@@ -52,6 +52,11 @@ function App() {
         }, 500);
   }
 
+  const EliminarGasto = id =>{
+    const gastosActualizados = gastos.filter(gasto => gasto.id !==id)
+    setGastos(gastosActualizados)
+  }
+
 
 
   return (
@@ -71,6 +76,7 @@ function App() {
       <ListadoGstos
       gastos = {gastos}
       setGastEditar ={setGastEditar}
+      EliminarGasto = {EliminarGasto}
       />
       </main>
       <div className='nuevo-gasto'>
